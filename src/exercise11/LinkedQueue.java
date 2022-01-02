@@ -6,16 +6,33 @@ public class LinkedQueue {
 
     public boolean isEmpty() {
         // Check if queue has no elements
-        return false;
+        return this.backNode == null && this.frontNode == null;
     }
 
     public void offer(String data) {
         // Offer element to queue
+        Node currentNode = new Node(data);
+        if (this.isEmpty()) {
+            this.frontNode = this.backNode = currentNode;
+        } else {
+            this.backNode.setNextNode(currentNode);
+            this.backNode = currentNode;
+        }
     }
 
     public String poll() {
         // Poll element from queue
-        return null;
+        String data = "";
+        if (this.isEmpty()) {
+            return null;
+        } else {
+            Node currentNode = this.frontNode.getNextNode();
+            data = this.frontNode.getData();
+            this.frontNode = currentNode;
+            this.frontNode.setNextNode(currentNode.getNextNode());
+        }
+
+        return data;
     }
 
     @Override
