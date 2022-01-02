@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Linked Stack",
+      "setup": "cd src && javac exercise11/Node.java exercise11/NodeUtils.java exercise11/LinkedStack.java exercise11/LinkedStackDemo.java",
+      "run": "cd src && java -ea exercise11.LinkedStackDemo",
+      "input": "",
+      "output": "Stack: \r\nPop: null\r\nStack: D->C->B->A\r\nPop: D\r\nStack: C->B->A\r\nPop: C\r\nStack: B->A",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    },
+    {
+      "name": "Linked Queue",
+      "setup": "cd src && javac exercise11/Node.java exercise11/NodeUtils.java exercise11/LinkedQueue.java exercise11/LinkedQueueDemo.java",
+      "run": "cd src && java -ea exercise11.LinkedQueueDemo",
+      "input": "",
+      "output": "Queue: \r\nPoll: null\r\nQueue: A->B->C->D->E\r\nPoll: A\r\nPoll: B\r\nQueue: C->D->E\r\nQueue: C->D->E->F\r\nPoll: C\r\nPoll: D\r\nQueue: E->F\r\nQueue: E->F->G\r\nPoll: E\r\nQueue: F->G",
+      "comparison": "included",
+      "timeout": 1,
+      "points": null
+    }
+  ]
+}
